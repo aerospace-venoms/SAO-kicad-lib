@@ -54,6 +54,19 @@ reference them relative to the library structure — no path fixes needed as
 long as `symbols/`, `footprints/`, and `3dmodels/` stay siblings of each
 other, as they are in this repo.
 
+## Third-party 3D model
+
+`SAO_Addon_Side` reuses the standard KiCad IDC box header 3D model
+(`Connector_IDC.3dshapes/IDC-Header_2x03_P2.54mm_Vertical.wrl`) rather than
+bundling a copy — that model belongs to KiCad's official
+[3D model library](https://github.com/KiCad/kicad-packages3d) (CC-BY-SA
+4.0), and it ships with every standard KiCad install via the `${KISYS3DMOD}`
+path variable KiCad defines automatically. No extra setup needed, but this
+does mean a KiCad install with its standard 3D model library removed won't
+show that particular model (the footprint and PCB layout are unaffected
+either way). `SAO_Badge_Side` uses our own `SAO-Female-Connector.step`,
+bundled in this package under this repo's [license](LICENSE).
+
 ## Troubleshooting
 
 - **Footprint missing / shows as "not found" after PCM install:** your
