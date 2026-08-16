@@ -1,6 +1,7 @@
 # SAO 2.0 KiCad Library
 
 🤖 This project was created and maintained with machine assistance. 🤖
+
 The original idea and guidance along the way was human.
 
 Requires **KiCad 10.0 or newer**.
