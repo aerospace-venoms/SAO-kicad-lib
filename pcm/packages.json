@@ -4,7 +4,7 @@
       "$schema": "https://go.kicad.org/pcm/schemas/v1",
       "name": "SAO Connector Library",
       "description": "Symbols, footprints, and 3D models for Shitty Add-On (SAO) badge connectors.",
-      "description_full": "Symbols, footprints, and 3D models for designing badges and add-ons that use the SAO (Shitty Add-On) connector standard: a 2x03, 2.54mm pitch IDC header carrying 3V3, GND, SDA, SCL, and two general-purpose pins.\n\nIncludes:\n- SAO_Addon_Side: connector for the add-on board (the SAO itself)\n- SAO_Badge_Side: mating connector for the host badge\n\nAfter installing, go to Preferences > Packages and Updates > Library Package Handling and disable the nickname prefix before installing this package, so the footprint library is added as \"SAO\" rather than \"PCM_SAO\". This ensures each symbol's default footprint assignment resolves automatically with no extra setup.",
+      "description_full": "Symbols, footprints, and 3D models for designing badges and add-ons that use the SAO (Shitty Add-On) connector standard: a 2x03, 2.54mm pitch IDC header carrying 3V3, GND, SDA, SCL, and two general-purpose pins.\n\nIncludes:\n- SAO_Addon_Side: connector for the add-on board (the SAO itself)\n- SAO_Badge_Side: mating connector for the host badge\n\nRequires KiCad 10.0 or newer. Install via the Plugin and Content Manager with default settings \u2014 no preference changes needed.",
       "identifier": "com.aerospace-venoms.sao",
       "type": "library",
       "author": {
@@ -29,11 +29,11 @@
         {
           "version": "1.0.0",
           "status": "stable",
-          "kicad_version": "9.0",
-          "download_size": 27755,
-          "install_size": 132098,
+          "kicad_version": "10.0",
+          "download_size": 27650,
+          "install_size": 131857,
           "download_url": "https://github.com/aerospace-venoms/SAO-kicad-lib/releases/download/v1.0.0/sao-kicad-lib-1.0.0.zip",
-          "download_sha256": "2fee4491fa26d38a53d918f093674d80b702c65ef6c005f478d9ba21b0565435"
+          "download_sha256": "fc40adaf5dddfe5fb31df395cd6abc550be9e39cad446eb45324615dad07bcfa"
         }
       ]
     }

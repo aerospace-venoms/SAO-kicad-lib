@@ -57,7 +57,7 @@ def install_size(zip_path: pathlib.Path) -> int:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("version")
-    ap.add_argument("--kicad-version", default="9.0")
+    ap.add_argument("--kicad-version", default="10.0")
     ap.add_argument("--status", default="stable")
     ap.add_argument(
         "--download-url-base",

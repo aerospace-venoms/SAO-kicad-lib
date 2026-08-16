@@ -440,7 +440,7 @@
 		)
 	)
 	(embedded_fonts no)
-	(model "${KICAD9_3RD_PARTY}/3dmodels/com_aerospace-venoms_sao/SAO.3dshapes/SAO-Female-Connector.step"
+	(model "${KICAD10_3RD_PARTY}/3dmodels/com_aerospace-venoms_sao/SAO.3dshapes/SAO-Female-Connector.step"
 		(offset
 			(xyz -4.1 -2.6 0)
 		)

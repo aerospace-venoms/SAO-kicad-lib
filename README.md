@@ -11,27 +11,28 @@ Includes two parts:
 | `SAO_Addon_Side` | The add-on board itself |
 | `SAO_Badge_Side` | The host badge that the add-on plugs into |
 
+Requires **KiCad 10.0 or newer**.
+
 ## Install (recommended): via the Plugin and Content Manager
 
 This is the easiest way to install and keep the library up to date — no
-manual file wrangling, no broken paths.
+manual file wrangling, no broken paths, no preference changes needed.
 
-1. **Before installing**, disable the KiCad PCM library-nickname prefix so
-   the footprint library gets added as `SAO` instead of `PCM_SAO`:
-   `Preferences` → `Packages and Updates` → `Library Package Handling` →
-   uncheck the nickname-prefix option.
-   *(This step matters: the bundled symbols point at footprints named
-   `SAO:...`. Skipping it means you'll need to manually reassign footprints
-   after install.)*
-2. Open KiCad → `Tools` → `Plugin and Content Manager`.
-3. Go to the **Repositories** tab (or `Manage Repositories`) and add:
+1. Open KiCad → `Tools` → `Plugin and Content Manager`.
+2. Go to the **Repositories** tab (or `Manage Repositories`) and add:
    ```
    https://raw.githubusercontent.com/aerospace-venoms/SAO-kicad-lib/main/pcm/repository.json
    ```
-4. Switch to the **Repository** tab, find **SAO Connector Library**, click
+3. Switch to the **Repository** tab, find **SAO Connector Library**, click
    **Install**, then **Apply Pending Changes**.
-5. Symbols, footprints, and 3D models are now available in every project —
+4. Symbols, footprints, and 3D models are now available in every project —
    no per-project setup needed.
+
+PCM installs the footprint library under the nickname `PCM_SAO` by default
+(this is KiCad's own default behavior, not something this package
+configures) — the bundled symbols' default footprint fields already point
+at `PCM_SAO:...` to match, so footprints auto-assign correctly out of the
+box.
 
 Updates show up automatically in the PCM's **Installed** tab whenever a new
 version is released.
@@ -46,13 +47,21 @@ If you'd rather not add a repository, or you're offline:
    `symbols/SAO.kicad_sym`.
 4. Open `Preferences` → `Manage Footprint Libraries...`
 5. Click the folder icon and select the `footprints/SAO.pretty` folder.
+   **Name the nickname `PCM_SAO`** (not `SAO`) so it matches the symbols'
+   default footprint fields — same nickname the PCM install path produces.
 6. Click OK on both dialogs, then close and reopen your project (or reload
    libraries) to pick up the new parts.
 
-With this method, 3D models resolve automatically since the footprint files
-reference them relative to the library structure — no path fixes needed as
-long as `symbols/`, `footprints/`, and `3dmodels/` stay siblings of each
-other, as they are in this repo.
+**Note on 3D models with this method:** the add-on-side model resolves
+automatically (it points at KiCad's own bundled 3D model library). The
+badge-side model (`SAO-Female-Connector.step`) won't show in the 3D viewer
+unless you also copy `3dmodels/SAO.3dshapes/` into your KiCad 3rd-party
+directory at `<3rd-party dir>/3dmodels/com_aerospace-venoms_sao/SAO.3dshapes/`
+(find `<3rd-party dir>` under `Preferences` → `Configure Paths` →
+`KICAD10_3RD_PARTY`). Symbols, footprints, and the PCB itself are unaffected
+either way — this only affects the 3D preview/render. If you want the 3D
+model to just work with no extra step, use the PCM install method above
+instead.
 
 ## Third-party 3D model
 
@@ -69,10 +78,11 @@ bundled in this package under this repo's [license](LICENSE).
 
 ## Troubleshooting
 
-- **Footprint missing / shows as "not found" after PCM install:** your
-  footprint library nickname doesn't match `SAO`. Either redo step 1 above
-  and reinstall, or manually rename the footprint library's nickname to
-  `SAO` in `Manage Footprint Libraries`.
+- **Footprint missing / shows as "not found":** check your footprint
+  library's nickname in `Manage Footprint Libraries` — it needs to be
+  exactly `PCM_SAO` to match the symbols' default footprint fields. PCM
+  installs use this nickname automatically; manual installs need it set by
+  hand (see step 5 above).
 - **3D model missing in the 3D viewer:** confirm `3dmodels/SAO.3dshapes/`
   installed alongside `footprints/` and `symbols/` — all three are part of
   the same package and always install together via PCM.

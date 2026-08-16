@@ -29,7 +29,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SAO:SAO_Addon_Side"
+		(property "Footprint" "PCM_SAO:SAO_Addon_Side"
 			(at 0.254 7.366 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -212,7 +212,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SAO:SAO_Badge_Side"
+		(property "Footprint" "PCM_SAO:SAO_Badge_Side"
 			(at -0.254 7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
