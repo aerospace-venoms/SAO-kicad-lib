@@ -11,6 +11,8 @@ Includes two parts:
 | `SAO_Addon_Side` | The add-on board itself |
 | `SAO_Badge_Side` | The host badge that the add-on plugs into |
 
+![Library symbols in KiCad](images/library-symbols.png)
+
 Requires **KiCad 10.0 or newer**.
 
 ## Install (recommended): via the Plugin and Content Manager
@@ -63,10 +65,14 @@ either way — this only affects the 3D preview/render. If you want the 3D
 model to just work with no extra step, use the PCM install method above
 instead.
 
+## Footprints
+
+![SAO footprints](images/footprints.png)
+
 ## Third-party 3D model
 
 `SAO_Addon_Side` reuses the standard KiCad IDC box header 3D model
-(`Connector_IDC.3dshapes/IDC-Header_2x03_P2.54mm_Vertical.wrl`) rather than
+(`Connector_IDC.3dshapes/IDC-Header_2x03_P2.54mm_Vertical.step`) rather than
 bundling a copy — that model belongs to KiCad's official
 [3D model library](https://github.com/KiCad/kicad-packages3d) (CC-BY-SA
 4.0), and it ships with every standard KiCad install via the
@@ -76,6 +82,10 @@ library removed won't show that particular model (the footprint and PCB
 layout are unaffected either way). `SAO_Badge_Side` uses our own
 `SAO-Female-Connector.step`, bundled in this package under this repo's
 [license](LICENSE).
+
+| Front | Back |
+|---|---|
+| ![3D view, front side](images/3d-frontside.png) | ![3D view, back side](images/3d-backside.png) |
 
 ## Troubleshooting
 
