@@ -86,10 +86,10 @@ either way, this only affects the 3D preview/render.
 
 There is a whole world of badge and SAO makers out there! Come find us and say 'hi'.
 
-- [badge.life](https://badge.life/) — the badge-making community hub: a directory of badges, makers, and events, plus a running history of the #badgelife scene.
-- [BadgeMakers Discord](https://discord.gg/kx87vuqgqN) — the most active real-time chat for badge and SAO design/fab questions, show-and-tell, and group buys.
-- [SAO 2.0 Standard on Hackaday.io](https://hackaday.io/project/175182-simple-add-ons-sao) — the connector spec this library implements (see note above on the one intentional deviation).
-- [KiCad Addons developer docs](https://dev-docs.kicad.org/en/addons/) — background on the PCM package format this repo follows, useful if you want to package your own badge/SAO library the same way.
+- [badge.life](https://badge.life/) the badge-making community hub: a directory of badges, makers, and events, plus a running history of the #badgelife scene, mostly at DEF CON but some other conferences as well.
+- [BadgeMakers Discord](https://discord.gg/kx87vuqgqN): the most active real-time chat for badge and SAO design/fab questions, show-and-tell, and group buys.
+- [SAO 2.0 Standard on Hackaday.io](https://hackaday.io/project/175182-simple-add-ons-sao): the connector spec this library implements (see note above on the one intentional deviation).
+- [KiCad Addons developer docs](https://dev-docs.kicad.org/en/addons/): background on the PCM package format this repo follows, useful if you want to package your own shared library the same way.
 
 
 ## Contributing
@@ -113,10 +113,16 @@ release GitHub Action — don't hand-edit it.
 
 ### Releasing a new version
 
-Bump the version in `metadata.json`, then push a tag like `v1.1.0`. The
+- Discuss the new version on the BadgeLife discord and reach consensus (this is more officially called "convene the SAO specification working group"). 
+- Bump the version in `metadata.json`
+- Push a tag like `v1.1.0`. The
 `release` GitHub Action builds the package zip, attaches it to a GitHub
 Release, and regenerates `pcm/packages.json` and `pcm/repository.json` so
 existing PCM users get the update automatically.
+
+## Credit where due:
+
+- (TBD)
 
 ## License
 
