@@ -1,0 +1,41 @@
+{
+  "packages": [
+    {
+      "$schema": "https://go.kicad.org/pcm/schemas/v1",
+      "name": "SAO Connector Library",
+      "description": "Symbols, footprints, and 3D models for Shitty Add-On (SAO) badge connectors.",
+      "description_full": "Symbols, footprints, and 3D models for designing badges and add-ons that use the SAO (Shitty Add-On) connector standard: a 2x03, 2.54mm pitch IDC header carrying 3V3, GND, SDA, SCL, and two general-purpose pins.\n\nIncludes:\n- SAO_Addon_Side: connector for the add-on board (the SAO itself)\n- SAO_Badge_Side: mating connector for the host badge\n\nAfter installing, go to Preferences > Packages and Updates > Library Package Handling and disable the nickname prefix before installing this package, so the footprint library is added as \"SAO\" rather than \"PCM_SAO\". This ensures each symbol's default footprint assignment resolves automatically with no extra setup.",
+      "identifier": "com.aerospace-venoms.sao",
+      "type": "library",
+      "author": {
+        "name": "Aerospace Venoms",
+        "contact": {
+          "web": "https://github.com/aerospace-venoms/SAO-kicad-lib"
+        }
+      },
+      "license": "WTFPL",
+      "resources": {
+        "homepage": "https://github.com/aerospace-venoms/SAO-kicad-lib"
+      },
+      "tags": [
+        "symbols",
+        "footprints",
+        "models3d",
+        "connector",
+        "badge",
+        "sao"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "status": "stable",
+          "kicad_version": "9.0",
+          "download_size": 54713,
+          "install_size": 251451,
+          "download_url": "https://github.com/aerospace-venoms/SAO-kicad-lib/releases/download/v1.0.0/sao-kicad-lib-1.0.0.zip",
+          "download_sha256": "bfb8508c0e112b1be15501e1357f308900200373cd8550ac55a0e9655d408820"
+        }
+      ]
+    }
+  ]
+}

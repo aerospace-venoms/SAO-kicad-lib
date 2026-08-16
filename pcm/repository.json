@@ -1,0 +1,16 @@
+{
+  "$schema": "https://go.kicad.org/pcm/schemas/v1",
+  "name": "SAO Connector Library Repository",
+  "packages": {
+    "url": "https://raw.githubusercontent.com/aerospace-venoms/SAO-kicad-lib/main/pcm/packages.json",
+    "sha256": "ea6bc2d9cf3d423bd759cd1098394c1e9cb9cadcd9956f4e59c53ceb7e5b3b69",
+    "update_time_utc": "2026-08-16 22:43:13",
+    "update_timestamp": 1786920193
+  },
+  "resources": {
+    "url": "https://raw.githubusercontent.com/aerospace-venoms/SAO-kicad-lib/main/pcm/resources.zip",
+    "sha256": "90005cb2355c737c61ea7abcbd709f8fb3f1bb6d520349efcf932a457a81c45a",
+    "update_time_utc": "2026-08-16 22:43:13",
+    "update_timestamp": 1786920193
+  }
+}
