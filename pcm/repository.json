@@ -3,14 +3,14 @@
   "name": "SAO Connector Library Repository",
   "packages": {
     "url": "https://raw.githubusercontent.com/aerospace-venoms/SAO-kicad-lib/main/pcm/packages.json",
-    "sha256": "52bb6992ad021872fa00b756405f81aafc59bc865c628f5f8e0318aeefc1b31a",
-    "update_time_utc": "2026-08-16 23:06:12",
-    "update_timestamp": 1786921572
+    "sha256": "8f16b4dac93332869ea3fd46cd3bf0da05564b6e3a73c57599681d687abee548",
+    "update_time_utc": "2026-08-16 23:09:50",
+    "update_timestamp": 1786921790
   },
   "resources": {
     "url": "https://raw.githubusercontent.com/aerospace-venoms/SAO-kicad-lib/main/pcm/resources.zip",
-    "sha256": "90005cb2355c737c61ea7abcbd709f8fb3f1bb6d520349efcf932a457a81c45a",
-    "update_time_utc": "2026-08-16 23:06:12",
-    "update_timestamp": 1786921572
+    "sha256": "fcee771e4c2439aaa60aeca2bd617f6a206d23b29209938ff2408c46bfacad81",
+    "update_time_utc": "2026-08-16 23:09:50",
+    "update_timestamp": 1786921790
   }
 }
