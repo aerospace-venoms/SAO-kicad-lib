@@ -31,9 +31,9 @@
           "status": "stable",
           "kicad_version": "10.0",
           "download_size": 27519,
-          "install_size": 131763,
+          "install_size": 131764,
           "download_url": "https://github.com/aerospace-venoms/SAO-kicad-lib/releases/download/v1.0.0/sao-kicad-lib-1.0.0.zip",
-          "download_sha256": "5c63c8529bea041fba6bfccb3dad881390e1117242d4be66338e326cfdc5efd4"
+          "download_sha256": "5ecfce02792a100afae958d77913695e02bcbbb03f60c14937233fac9ba3153f"
         }
       ]
     }
