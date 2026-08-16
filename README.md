@@ -1,7 +1,8 @@
 # SAO 2.0 KiCad Library
 
-This library is a KiCad library implementing the [SAO 2.0 Standard](https://hackaday.io/project/175182-simple-add-ons-sao) *
+Requires **KiCad 10.0 or newer**.
 
+This is a KiCad library implementing the [SAO 2.0 Standard](https://hackaday.io/project/175182-simple-add-ons-sao) *
 
 *making VCC the marked square pin is silly, I changed it to GND, that's the only difference from the spec
 
@@ -18,7 +19,7 @@ Includes two parts (pick the one suited for your use):
 
 ![Library symbols in KiCad](images/library-symbols.png)
 
-Requires **KiCad 10.0 or newer**.
+
 
 ## Install (recommended): via the Plugin and Content Manager
 
@@ -79,6 +80,16 @@ either way, this only affects the 3D preview/render.
 - **3D model missing in the 3D viewer:** confirm `3dmodels/SAO.3dshapes/`
   installed alongside `footprints/` and `symbols/`. all three are part of
   the same package and always install together via PCM.
+
+
+## Resources
+
+There is a whole world of badge and SAO makers out there! Come find us and say 'hi'.
+
+- [badge.life](https://badge.life/) — the badge-making community hub: a directory of badges, makers, and events, plus a running history of the #badgelife scene.
+- [BadgeMakers Discord](https://discord.gg/kx87vuqgqN) — the most active real-time chat for badge and SAO design/fab questions, show-and-tell, and group buys.
+- [SAO 2.0 Standard on Hackaday.io](https://hackaday.io/project/175182-simple-add-ons-sao) — the connector spec this library implements (see note above on the one intentional deviation).
+- [KiCad Addons developer docs](https://dev-docs.kicad.org/en/addons/) — background on the PCM package format this repo follows, useful if you want to package your own badge/SAO library the same way.
 
 
 ## Contributing
