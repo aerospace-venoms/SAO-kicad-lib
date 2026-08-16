@@ -1,15 +1,20 @@
-# SAO KiCad Library
+# SAO 2.0 KiCad Library
 
-Symbols, footprints, and 3D models for designing badges and add-ons that use
-the **SAO (Shitty Add-On)** connector standard: a 2x03, 2.54mm pitch IDC
+This library is a KiCad library implementing the [SAO 2.0 Standard](https://hackaday.io/project/175182-simple-add-ons-sao) *
+
+
+*making VCC the marked square pin is silly, I changed it to GND, that's the only difference from the spec
+
+This library includes symbols, footprints, and 3D models for designing badges and add-ons that use
+the **SAO (Shitty Add-On) 2.0** connector standard: a 2x3, 2.54mm pitch IDC
 header carrying `3V3`, `GND`, `SDA`, `SCL`, and two general-purpose pins.
 
-Includes two parts:
+Includes two parts (pick the one suited for your use):
 
 | Symbol / Footprint | Use on |
 |---|---|
-| `SAO_Addon_Side` | The add-on board itself |
-| `SAO_Badge_Side` | The host badge that the add-on plugs into |
+| `SAO_Addon_Side` | Usually, exactly one of these goes on your SAO board |
+| `SAO_Badge_Side` | One or more of these goes on a host badge |
 
 ![Library symbols in KiCad](images/library-symbols.png)
 
@@ -17,8 +22,7 @@ Requires **KiCad 10.0 or newer**.
 
 ## Install (recommended): via the Plugin and Content Manager
 
-This is the easiest way to install and keep the library up to date — no
-manual file wrangling, no broken paths, no preference changes needed.
+This is the easiest way to install and keep the library up to date.
 
 1. Open KiCad → `Tools` → `Plugin and Content Manager`.
 2. Go to the **Repositories** tab (or `Manage Repositories`) and add:
@@ -27,17 +31,9 @@ manual file wrangling, no broken paths, no preference changes needed.
    ```
 3. Switch to the **Repository** tab, find **SAO Connector Library**, click
    **Install**, then **Apply Pending Changes**.
-4. Symbols, footprints, and 3D models are now available in every project —
-   no per-project setup needed.
+4. Symbols, footprints, and 3D models are now available in every project.
 
-PCM installs the footprint library under the nickname `PCM_SAO` by default
-(this is KiCad's own default behavior, not something this package
-configures) — the bundled symbols' default footprint fields already point
-at `PCM_SAO:...` to match, so footprints auto-assign correctly out of the
-box.
-
-Updates show up automatically in the PCM's **Installed** tab whenever a new
-version is released.
+PCM (KiCad's package manager) installs this footprint library under the nickname `PCM_SAO` by default. The footprint and 3d model are configured by default, so you don't need to change anything.
 
 ## Install (fallback): from a local copy
 
@@ -61,27 +57,13 @@ unless you also copy `3dmodels/SAO.3dshapes/` into your KiCad 3rd-party
 directory at `<3rd-party dir>/3dmodels/com_aerospace-venoms_sao/SAO.3dshapes/`
 (find `<3rd-party dir>` under `Preferences` → `Configure Paths` →
 `KICAD10_3RD_PARTY`). Symbols, footprints, and the PCB itself are unaffected
-either way — this only affects the 3D preview/render. If you want the 3D
-model to just work with no extra step, use the PCM install method above
-instead.
+either way, this only affects the 3D preview/render.
 
 ## Footprints
 
 ![SAO footprints](images/footprints.png)
 
-## Third-party 3D model
-
-`SAO_Addon_Side` reuses the standard KiCad IDC box header 3D model
-(`Connector_IDC.3dshapes/IDC-Header_2x03_P2.54mm_Vertical.step`) rather than
-bundling a copy — that model belongs to KiCad's official
-[3D model library](https://github.com/KiCad/kicad-packages3d) (CC-BY-SA
-4.0), and it ships with every standard KiCad install via the
-`${KICAD10_3DMODEL_DIR}` path variable KiCad defines automatically. No extra
-setup needed, but this does mean a KiCad install with its standard 3D model
-library removed won't show that particular model (the footprint and PCB
-layout are unaffected either way). `SAO_Badge_Side` uses our own
-`SAO-Female-Connector.step`, bundled in this package under this repo's
-[license](LICENSE).
+## 3D Models
 
 | Front | Back |
 |---|---|
@@ -90,15 +72,18 @@ layout are unaffected either way). `SAO_Badge_Side` uses our own
 ## Troubleshooting
 
 - **Footprint missing / shows as "not found":** check your footprint
-  library's nickname in `Manage Footprint Libraries` — it needs to be
+  library's nickname in `Manage Footprint Libraries`. It needs to be
   exactly `PCM_SAO` to match the symbols' default footprint fields. PCM
   installs use this nickname automatically; manual installs need it set by
   hand (see step 5 above).
 - **3D model missing in the 3D viewer:** confirm `3dmodels/SAO.3dshapes/`
-  installed alongside `footprints/` and `symbols/` — all three are part of
+  installed alongside `footprints/` and `symbols/`. all three are part of
   the same package and always install together via PCM.
 
-## Repository layout
+
+## Contributing
+
+### Repo layout
 
 This repo is structured to match KiCad's PCM content-library package format
 directly (see [KiCad Addons docs](https://dev-docs.kicad.org/en/addons/)):
@@ -115,7 +100,7 @@ pcm/                  # generated repository index (packages.json, repository.js
 `pcm/` is generated by `scripts/build_release.py` and committed by the
 release GitHub Action — don't hand-edit it.
 
-## Releasing a new version
+### Releasing a new version
 
 Bump the version in `metadata.json`, then push a tag like `v1.1.0`. The
 `release` GitHub Action builds the package zip, attaches it to a GitHub
