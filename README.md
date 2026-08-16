@@ -25,44 +25,20 @@ Includes two parts (pick the one suited for your use):
 
 
 
-## Install (recommended): via the Plugin and Content Manager
-
-This is the easiest way to install and keep the library up to date.
+## Install via the Plugin and Content Manager
 
 1. Open KiCad → `Tools` → `Plugin and Content Manager`.
-2. Go to the **Repositories** tab (or `Manage Repositories`) and add:
+2. Go to the **Repositories** tab  and click `Manage`. In that window, click the `+` button (botton-left) and enter this package's URL:
    ```
    https://raw.githubusercontent.com/aerospace-venoms/SAO-kicad-lib/main/pcm/repository.json
    ```
-3. Switch to the **Repository** tab, find **SAO Connector Library**, click
-   **Install**, then **Apply Pending Changes**.
+   Click `OK`, then `Save`. 
+3. In the dropdown menu on the `Repository` tab, find `SAO Connector Library Repository`, go to the `Libraries` sub-tab, click
+   `Install` on the SAO Connector Library, then `Apply Pending Changes`.
+4. Close and re-open Kicad.
 4. Symbols, footprints, and 3D models are now available in every project.
 
-PCM (KiCad's package manager) installs this footprint library under the nickname `PCM_SAO` by default. The footprint and 3d model are configured by default, so you don't need to change anything.
-
-## Install (fallback): from a local copy
-
-If you'd rather not add a repository, or you're offline:
-
-1. Download/clone this repository.
-2. Open KiCad → `Preferences` → `Manage Symbol Libraries...`
-3. Click the folder icon (**Add existing library to table**) and select
-   `symbols/SAO.kicad_sym`.
-4. Open `Preferences` → `Manage Footprint Libraries...`
-5. Click the folder icon and select the `footprints/SAO.pretty` folder.
-   **Name the nickname `PCM_SAO`** (not `SAO`) so it matches the symbols'
-   default footprint fields — same nickname the PCM install path produces.
-6. Click OK on both dialogs, then close and reopen your project (or reload
-   libraries) to pick up the new parts.
-
-**Note on 3D models with this method:** the add-on-side model resolves
-automatically (it points at KiCad's own bundled 3D model library). The
-badge-side model (`SAO-Female-Connector.step`) won't show in the 3D viewer
-unless you also copy `3dmodels/SAO.3dshapes/` into your KiCad 3rd-party
-directory at `<3rd-party dir>/3dmodels/com_aerospace-venoms_sao/SAO.3dshapes/`
-(find `<3rd-party dir>` under `Preferences` → `Configure Paths` →
-`KICAD10_3RD_PARTY`). Symbols, footprints, and the PCB itself are unaffected
-either way, this only affects the 3D preview/render.
+PCM (KiCad's package manager) installs this symbol library under `PCM_SAO` by default. The corresponding footprint and 3d model are configured by default, so you don't need to change anything once you've got the symbol in your schematic editor.
 
 ## Footprints
 
@@ -88,7 +64,7 @@ either way, this only affects the 3D preview/render.
 
 ## Resources
 
-There is a whole world of badge and SAO makers out there! Come find us and say 'hi'.
+There is a whole world of badge and SAO makers out there. Come find us! We want to trade!
 
 - [badge.life](https://badge.life/) the badge-making community hub: a directory of badges, makers, and events, plus a running history of the #badgelife scene, mostly at DEF CON but some other conferences as well.
 - [BadgeMakers Discord](https://discord.gg/kx87vuqgqN): the most active real-time chat for badge and SAO design/fab questions, show-and-tell, and group buys.
