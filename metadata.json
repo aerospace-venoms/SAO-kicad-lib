@@ -32,6 +32,13 @@
       "install_size": 131764
     },
     {
+      "version": "1.0.1",
+      "status": "stable",
+      "kicad_version": "10.0",
+      "download_size": 27519,
+      "install_size": 131764
+    },
+    {
       "version": "1.0.2",
       "status": "stable",
       "kicad_version": "10.0"
