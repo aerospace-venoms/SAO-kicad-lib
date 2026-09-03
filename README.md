@@ -42,7 +42,9 @@ PCM (KiCad's package manager) installs this symbol library under `PCM_SAO` by de
 
 ## Footprints
 
-![SAO footprints](images/footprints.png)
+| `SAO_Addon_Side` | `SAO_Badge_Side` |
+|---|---|
+| ![SAO_Addon_Side footprint](images/footprints_addon.png) | ![SAO_Badge_Side footprint](images/footprints_badge.png) |
 
 ## 3D Models
 
