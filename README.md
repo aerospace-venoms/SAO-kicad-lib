@@ -48,9 +48,7 @@ PCM (KiCad's package manager) installs this symbol library under `PCM_SAO` by de
 
 ## 3D Models
 
-| Front | Back |
-|---|---|
-| ![3D view, front side](images/3d-frontside.png) | ![3D view, back side](images/3d-backside.png) |
+Both parts include 3D models, so they'll render properly in the PCB editor's 3D viewer and in any 3D export of your board.
 
 ## Troubleshooting
 
