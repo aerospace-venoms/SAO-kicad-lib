@@ -67,7 +67,6 @@ Both parts include 3D models, so they'll render properly in the PCB editor's 3D 
 There is a whole world of badge and SAO makers out there. Come find us! We want to trade!
 
 - [badge.life](https://badge.life/) the badge-making community hub: a directory of badges, makers, and events, plus a running history of the #badgelife scene, mostly at DEF CON but some other conferences as well.
-- [BadgeMakers Discord](https://discord.gg/kx87vuqgqN): the most active real-time chat for badge and SAO design/fab questions, show-and-tell, and group buys.
 - [SAO 2.0 Standard on Hackaday.io](https://hackaday.io/project/175182-simple-add-ons-sao): the connector spec this library implements (see note above on the one intentional deviation).
 - [KiCad Addons developer docs](https://dev-docs.kicad.org/en/addons/): background on the PCM package format this repo follows, useful if you want to package your own shared library the same way.
 
